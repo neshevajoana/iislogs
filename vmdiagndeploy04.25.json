@@ -176,7 +176,7 @@
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
             "apiVersion": "2018-07-01",
-            "name": "[concat(parameters('vmDiagnosticsStorageAccountName'), '/default/iislogs', copyIndex())]",
+            "name": "[concat(parameters('vmDiagnosticsStorageAccountName'), '/default/iislogs')]",
             "copy": {
                 "name": "containercopy",
                 "count": 1
