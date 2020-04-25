@@ -1,4 +1,3 @@
-﻿$templatedeploy = "C:\Users\neshe\OneDrive\Desktop\Assignments\vmdiagndeploy1.json"
+$templatedeploy = "https://raw.githubusercontent.com/neshevajoana/iislogs/master/vmdiagndeploy04.25.json"
 New-AzResourceGroup -name workiisdeploy -Location EastUS 
-New-AzResourceGroupDeployment -Name workiisdeploy -ResourceGroupName workiisdeploy -TemplateFile $templatedeploy
-
+New-AzResourceGroupDeployment -Name workiisdeploy -ResourceGroupName workiisdeploy -TemplateUri $templatedeploy
