@@ -5,7 +5,7 @@ steps:
   displayName: '$(Build.ArtifactStagingDirectory)'
   inputs:
     SourceFolder: test
-    TargetFolder: '$(Build.ArtifactStagingDirectory)\Updater\HelpFiles\Test'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)\HelpFiles\Test'
 
 - task: DownloadBuildArtifacts@0
   displayName: 'Download Build Artifacts'
@@ -18,7 +18,7 @@ steps:
     downloadPath: '$(Build.ArtifactStagingDirectory)\HelpFiles'
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: Updater'
+  displayName: 'Publish Artifact: HelpFiles'
   inputs:
     path: '$(Build.ArtifactStagingDirectory)'
 
