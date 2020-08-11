@@ -5,7 +5,7 @@ steps:
   displayName: '$(Build.ArtifactStagingDirectory)'
   inputs:
     SourceFolder: test
-    TargetFolder: '$(Build.ArtifactStagingDirectory)\Helpfiles'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)\Helpfiles\Test'
 
 - task: DownloadBuildArtifacts@0
   displayName: 'Download Build Artifacts'
@@ -13,8 +13,9 @@ steps:
     buildType: specific
     project: '361c4cf4-d0b3-4558-b09f-f223869b49a7'
     pipeline: 9
+    buildVesionToDownload: 'latest'
     downloadType: specific
-    downloadPath: '$(Build.ArtifactStagingDirectory)'
+    downloadPath: '$(Build.ArtifactStagingDirectory)\HelFiles'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: Updater'
